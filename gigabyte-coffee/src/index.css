@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-bg-dark: #12100e;
+    --color-bg-card-dark: #1a1614;
+    --color-accent-gold: #c99558;
+    --color-accent-amber: #e6b17e;
+    --color-cream: #fcf8f2;
+    --color-cream-card: #f8f3eb;
+    --color-text-dark: #231c18;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    background-color: #12100e;
+    color: #231c18;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom font utilities matching design */
+.font-script {
+  font-family: 'Satisfy', 'Caveat', cursive;
+}
+
+.font-serif-heading {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* Organic curve dividers and overlapping styling */
+.curved-top-dark {
+  border-top-left-radius: 4rem;
+  border-top-right-radius: 4rem;
+}
+
+.curved-bottom-dark {
+  border-bottom-left-radius: 4rem;
+  border-bottom-right-radius: 4rem;
+}
+
+@media (min-width: 768px) {
+  .curved-top-dark {
+    border-top-left-radius: 7rem;
+    border-top-right-radius: 7rem;
+  }
+  .curved-bottom-dark {
+    border-bottom-left-radius: 7rem;
+    border-bottom-right-radius: 7rem;
+  }
+}
+
+/* Floating animation for coffee elements */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+/* Steam rise animation */
+@keyframes steamRise {
+  0% {
+    opacity: 0.2;
+    transform: translateY(0) scaleX(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: translateY(-10px) scaleX(1.15);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-22px) scaleX(1.3);
+  }
+}
+
+.animate-steam {
+  animation: steamRise 3.5s ease-out infinite;
+}
+
+/* Dotted curve paths */
+.dotted-curve-stroke {
+  stroke-dasharray: 6 8;
+  animation: dashMove 30s linear infinite;
+}
+
+@keyframes dashMove {
+  to {
+    stroke-dashoffset: -100;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #14110f;
+}
+::-webkit-scrollbar-thumb {
+  background: #3d3028;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c99558;
+}
+
+/* Card cut-corner aesthetic from customer reviews mockup */
+.cut-corner-card {
+  border-radius: 1.5rem 1.5rem 1.5rem 0.25rem;
+}

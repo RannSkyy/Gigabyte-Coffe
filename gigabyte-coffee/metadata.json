@@ -1,0 +1,6 @@
+{
+  "name": "Gigabyte Coffee",
+  "description": "Official website for Gigabyte Coffee - artisanal brews, premium roasted beans, curated menu, and coffee gallery experience.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
